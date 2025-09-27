@@ -1,143 +1,131 @@
-# ER Diagram Workshop – Submission Template
+# Experiment 1: Entity-Relationship (ER) Diagram
 
-## Objective
-To understand and apply ER modeling concepts by creating ER diagrams for real-world applications.
-
-## Purpose
-Gain hands-on experience in designing ER diagrams that represent database structure including entities, relationships, attributes, and constraints.
+🎯 **Objective:**  
+To understand and apply ER modeling concepts by designing an ER diagram for a City Library system that manages book lending, events, speakers, and room bookings.
 
 ---
 
-# Scenario A: City Fitness Club Management
-
-**Business Context:**  
-FlexiFit Gym wants a database to manage its members, trainers, and fitness programs.
-
-**Requirements:**  
-- Members register with name, membership type, and start date.  
-- Each member can join multiple programs (Yoga, Zumba, Weight Training).  
-- Trainers assigned to programs; a program may have multiple trainers.  
-- Members may book personal training sessions with trainers.  
-- Attendance recorded for each session.  
-- Payments tracked for memberships and sessions.
-
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
+📚 **Purpose:**  
+The purpose of this exercise is to visually represent the structure of a library management database including entities, relationships, attributes, and constraints.
 
 ---
 
-# Scenario B: City Library Event & Book Lending System
+# Scenario: City Library Event and Book Lending System
 
-**Business Context:**  
-The Central Library wants to manage book lending and cultural events.
+## User Requirements
 
-**Requirements:**  
-- Members borrow books, with loan and return dates tracked.  
-- Each book has title, author, and category.  
-- Library organizes events; members can register.  
-- Each event has one or more speakers/authors.  
-- Rooms are booked for events and study.  
-- Overdue fines apply for late returns.
+- Members register with the library and provide contact details.  
+- Books are catalogued with unique IDs, titles, authors, and categories.  
+- Loans are tracked with loan date, return date, and fines (if overdue).  
+- Events are organized by the library with details like event name, type, and date.  
+- Members can register for multiple events, and events may have multiple members.  
+- Events can have one or more speakers, and speakers may present at many events.  
+- Rooms are available in the library, each with capacity and booking history.  
+- Bookings are made for rooms either for events or study purposes.  
 
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
 
 ---
 
-# Scenario C: Restaurant Table Reservation & Ordering
-
-**Business Context:**  
-A popular restaurant wants to manage reservations, orders, and billing.
-
-**Requirements:**  
-- Customers can reserve tables or walk in.  
-- Each reservation includes date, time, and number of guests.  
-- Customers place food orders linked to reservations.  
-- Each order contains multiple dishes; dishes belong to categories (starter, main, dessert).  
-- Bills generated per reservation, including food and service charges.  
-- Waiters assigned to serve reservations.
-
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
+## 📝 Tasks
+1. Identify entities, relationships, and attributes.  
+2. Draw the ER diagram using any tool (draw.io, dbdiagram.io, hand-drawn and scanned).  
+3. Include:  
+   - Cardinality & participation constraints  
+   - Billing/Fine support for late book returns  
+4. Explain:  
+   - Why you chose the entities and relationships  
+   - How you modeled billing/fines  
+5. Submit ER Diagram and Explanation.
 
 ---
 
-## Instructions for Students
+## Entities and Attributes
 
-1. Complete **all three scenarios** (A, B, C).  
-2. Identify entities, relationships, and attributes for each.  
-3. Draw ER diagrams using **draw.io / diagrams.net** or hand-drawn & scanned.  
-4. Fill in all tables and assumptions for each scenario.  
-5. Export the completed Markdown (with diagrams) as **a single PDF**
+- **Member**  
+  - MemberID (Primary Key)  
+  - Name  
+  - Email  
+  - Phone  
+
+- **Book**  
+  - BookID (Primary Key)  
+  - Title  
+  - Author  
+  - Category  
+
+- **Loan**  
+  - LoanID (Primary Key)  
+  - LoanDate  
+  - ReturnDate  
+  - Fine  
+
+- **Event**  
+  - EventID (Primary Key)  
+  - EventName  
+  - EventDate  
+  - EventType  
+
+- **Speaker**  
+  - SpeakerID (Primary Key)  
+  - Name  
+  - Topic  
+
+- **Room**  
+  - RoomID (Primary Key)  
+  - RoomName  
+  - Capacity  
+
+- **Booking**  
+  - BookingID (Primary Key)  
+  - BookingDate  
+  - Purpose  
+
+---
+
+## ER Diagram:
+
+![WhatsApp Image 2025-08-29 at 10 39 15_ecfd2c7f](https://github.com/user-attachments/assets/0b472523-d1d1-4aab-a717-a0a98c75ca45)
+
+
+## Relationships and Constraints
+
+1. **Borrows (Member ↔ Loan ↔ Book)**  
+   - Cardinality: Many-to-Many  
+   - Participation: Total on Loan, Partial on Member and Book  
+
+2. **Registers (Member ↔ Event)**  
+   - Cardinality: Many-to-Many  
+   - Participation: Partial for both  
+
+3. **Presents (Event ↔ Speaker)**  
+   - Cardinality: Many-to-Many  
+   - Participation: Partial for both  
+
+4. **Held In (Event ↔ Room)**  
+   - Cardinality: One-to-Many  
+   - Participation: Total on Event, Partial on Room  
+
+5. **Books (Room ↔ Booking)**  
+   - Cardinality: One-to-Many  
+   - Participation: Total on Booking, Partial on Room  
+
+---
+
+## Assumptions
+- A book can be borrowed by only one member at a time.  
+- Overdue fines apply only when books are returned late.  
+- Only registered members can attend events.  
+- Rooms may be booked for events or study purposes.  
+
+---
+
+## Design Choices
+- **Entities** were chosen to reflect the core operations of the library: Members, Books, Loans, Events, Speakers, Rooms, and Bookings.  
+- **Relationships** represent real-world interactions: members borrow books, attend events, speakers present at events, and rooms are booked for usage.  
+- **Constraints** ensure valid data: each event must take place in one room, loans must link a member and a book, etc.  
+
+---
+
+## Result
+Thus, the ER diagram effectively models the City Library Event and Book Lending System, representing borrowing, event participation, speaker management, and room bookings in a structured database design.
+
