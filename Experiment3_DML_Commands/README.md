@@ -239,21 +239,9 @@ FROM
 
 <img width="1421" height="210" alt="image" src="https://github.com/user-attachments/assets/2ef88cda-ab4d-4782-b46a-38ad63b1883b" />
 
----
 **Question 9**
 ---
 Create a report that shows the capitalized FirstName and capitalized LastName renamed as FirstName and Lastname respectively and EmployeeId from the employees table sorted by EmployeeId in descending order.
-
-employees table
-
-cid         name        type        notnull     dflt_value  pk
-----------  ----------  ----------  ----------  ----------  ----------
-0           EmployeeID  INTEGER      0                       1
-1           LastName    VARCHAR(15)  0                       0
-2           FirstName   VARCHAR(15)  0                       0
-3           BirthDate   DATETIME     0                       0
-4           Photo       VARCHAR(25)  0                       0
-5           Notes       VARCHAR(10)  0                       0
 
 <img width="295" height="197" alt="image" src="https://github.com/user-attachments/assets/888bd345-da50-41ee-bd8f-051526f05bd1" />
 
@@ -273,7 +261,7 @@ ORDER BY
 
 <img width="642" height="412" alt="image" src="https://github.com/user-attachments/assets/8adcd90c-1c0f-4b7e-a1fb-ab3fc3f41736" />
 
----
+
 
 **Question 10**
 ---
