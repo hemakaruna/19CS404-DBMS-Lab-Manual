@@ -54,7 +54,7 @@ sales(sale_id,sale_date,product_id,quantity,sell_price,total_sell_price)
 <img width="345" height="197" alt="image" src="https://github.com/user-attachments/assets/73caefd4-5587-44b6-a432-7fe1335b3ec1" />
 
 
-```
+```sql
 
 UPDATE sales
 SET sell_price = sell_price * 1.05
@@ -75,7 +75,7 @@ Change the supplier name to upper case where contact person contains ' Singh' in
 <img width="266" height="282" alt="image" src="https://github.com/user-attachments/assets/1411bab7-82a4-4b67-a3eb-985c2929251a" />
 
 
-```
+```sql
 UPDATE suppliers
 SET supplier_name = UPPER(supplier_name)
 WHERE contact_person LIKE '% Singh';
@@ -117,7 +117,7 @@ Write a query to fetch all the records from the EmployeeInfo table ordered by Em
 <img width="758" height="358" alt="image" src="https://github.com/user-attachments/assets/496a9436-1343-42e5-ab0e-11300ca79d9b" />
 
 
-```
+```sql
 SELECT EmpID, EmpFname, EmpLname, Department,Project, Address,  DOB, Gender
 FROM EmployeeInfo
 ORDER BY  EmpFname DESC;
@@ -138,7 +138,7 @@ salesman(name,commission)
 <img width="215" height="180" alt="image" src="https://github.com/user-attachments/assets/6c0de0b5-c0a7-4d92-82f0-0002bb6d5ada" />
 
 
-```
+```sql
 SELECT name, commission
 FROM salesman
 LIMIT 5;
@@ -157,7 +157,7 @@ Write a SQL query to determine the age group of value1 in the Calculations table
 <img width="477" height="382" alt="image" src="https://github.com/user-attachments/assets/615b95ab-cd39-4755-b468-9ba1404a2107" />
 
 
-```
+```sql
 SELECT
   id,
   value1,
@@ -194,7 +194,7 @@ product_id | original_price | discount_percentage
 
 <img width="537" height="182" alt="image" src="https://github.com/user-attachments/assets/3c417c88-4fdf-437c-a127-615fd8f997ae" />
 
-```
+```sql
 SELECT 
     product_id,
     original_price,
@@ -223,7 +223,7 @@ Discounted Price Percentage: Calculate the percentage that the discounted price 
 <img width="672" height="193" alt="image" src="https://github.com/user-attachments/assets/6c2d2cba-be03-4d87-a807-3252073b525e" />
 
 
-```
+```sql
 SELECT 
     product_id,
     original_price,
@@ -239,6 +239,7 @@ FROM
 
 <img width="1421" height="210" alt="image" src="https://github.com/user-attachments/assets/2ef88cda-ab4d-4782-b46a-38ad63b1883b" />
 
+---
 **Question 9**
 ---
 Create a report that shows the capitalized FirstName and capitalized LastName renamed as FirstName and Lastname respectively and EmployeeId from the employees table sorted by EmployeeId in descending order.
@@ -256,7 +257,7 @@ cid         name        type        notnull     dflt_value  pk
 
 <img width="295" height="197" alt="image" src="https://github.com/user-attachments/assets/888bd345-da50-41ee-bd8f-051526f05bd1" />
 
-```
+```sql
 SELECT 
     UPPER(FirstName) AS FirstName,
     UPPER(LastName) AS LastName,
@@ -269,27 +270,20 @@ ORDER BY
 ```
 
 **Output:**
+
 <img width="642" height="412" alt="image" src="https://github.com/user-attachments/assets/8adcd90c-1c0f-4b7e-a1fb-ab3fc3f41736" />
+
+---
 
 **Question 10**
 ---
 Write a SQL query to find all employees who were hired in the year 2022 from emp table.
 
-cid         name        type        
-----------  ----------  ---------- 
-0           empno       INT         
-1           ename       VARCHAR(100)
-2           job         VARCHAR(50)
-3           mgr         INT        
-4           hiredate    DATE        
-5           sal         DECIMAL(10,2)  
-6           comm        DECIMAL(10,2)  
-7           deptno      INT       
 
 <img width="656" height="237" alt="image" src="https://github.com/user-attachments/assets/ce47745b-10d8-47d4-af81-747862feaf4f" />
 
 
-```
+```sql
 SELECT *
 FROM emp
 WHERE strftime('%Y', hiredate) = '2022';
