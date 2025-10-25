@@ -39,6 +39,7 @@ DROP VIEW view_name;
 **Question 1**
 --
 From the following tables write a SQL query to find salespeople who had more than one customer. Return salesman_id and name.
+
 <img width="342" height="628" alt="image" src="https://github.com/user-attachments/assets/fb69cead-d085-424b-947c-10f710b526ca" />
 
 
@@ -103,6 +104,7 @@ WHERE age < (
 **Question 4**
 ---
 Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose AGE is LESS than $30
+
 <img width="586" height="578" alt="image" src="https://github.com/user-attachments/assets/a0027ffd-b183-472c-9e29-2e76a35639ba" />
 
 
